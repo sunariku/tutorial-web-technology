@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: "Figtree", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background-color: #edf2fb;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  background-color: #023e8a;
+  height: 100px;
+  padding: 0 1.5rem;
+}
+
+.brand {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.brand img {
+  width: 280px;
+  height: 65px;
+}
+
+.navigation {
+  background-color: #ffffff;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.aside {
+  width: 300px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #ffffff;
+  height: 250px;
+  border-top: 1px solid #d9dcd6;
+}
+
+.container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container li a {
+  display: inline-block;
+  padding: 1.2rem 1.5rem;
+  color: #000000;
+}
+
+.container li a:hover {
+  background-color: #0077b6;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d9dcd6;
+  border-radius: 8px;
+}
+
+.card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #d9dcd6;
+}
+
+.card-body {
+  padding: 1rem 1.5rem;
+}
+
+.card-footer {
+  padding: .8rem 1.5rem;
+  border-top: 1px solid #d9dcd6;
+  display: flex;
+  justify-content: flex-end;
+  color: #999999;
+  font-style: italic;
+}
+
+.card-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 14pt;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.col-1 { flex: 0 0 8.33%; }
+.col-2 { flex: 0 0 16.66%; }
+.col-3 { flex: 0 0 25%; }
+.col-4 { flex: 0 0 33.33%; }
+.col-5 { flex: 0 0 41.66%; }
+.col-6 { flex: 0 0 50%; }
+.col-7 { flex: 0 0 58.33%; }
+.col-8 { flex: 0 0 66.66%; }
+.col-9 { flex: 0 0 75%; }
+.col-10 { flex: 0 0 83.33%; }
+.col-11 { flex: 0 0 91.66%; }
+.col-12 { flex: 0 0 100%; }
+
+[class^="col-"] {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.form-label {
+  flex: 1;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.form-control {
+  flex: 3;
+  border: 1px solid #cccccc;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  font-size: 11pt;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #0077b6;
+}
+
+.btn {
+  background-color: #0077b6;
+  color: #ffffff;
+  padding: .5rem .8rem;
+  border-radius: 8px;
+  border: 1px solid #023e8a;
+  font-size: 10pt;
+  font-weight: bold;
+  cursor: pointer;
+}

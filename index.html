@@ -4,158 +4,121 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout</title>
+    <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Figtree", sans-serif;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-      }
-
-      .header {
-        height: 100px;
-        background-color: #151f2c;
-      }
-
-      .navigation {
-        background-color: #ffffff;
-        display: flex;
-        align-items: center;
-      }
-
-      .main {
-        background-color: #f6f8fb;
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-      }
-
-      .aside {
-        width: 400px;
-        padding: 1rem;
-      }
-
-      .content {
-        flex: 1;
-      }
-
-      .footer {
-        height: 200px;
-        background-color: #f6f8fb;
-        border-top: 1px solid #dadfe5;
-      }
-
-      .navigation ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-      }
-
-      .navigation a {
-        text-decoration: none;
-        color: #000000;
-        font-size: 10pt;
-        display: block;
-        padding: 1.1rem 2rem;
-      }
-
-      .navigation a:hover {
-        color: #ffffff;
-        background-color: #0054a6;
-        transition: 0.4s;
-      }
-
-      .card {
-        border: 1px solid #dadfe5;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card-header {
-        background-color: #ffffff;
-        padding: 1.2rem 1rem;
-        border-radius: 8px 8px 0 0;
-      }
-
-      .card-title {
-        margin: 0;
-        padding: 0;
-        font-size: 14pt;
-        font-weight: normal;
-      }
-
-      .card-body {
-        background-color: #ffffff;
-        padding: 1.2rem 1rem;
-        border-top: 1px solid #dadfe5;
-        border-bottom: 1px solid #dadfe5;
-      }
-
-      .card-footer {
-        background-color: #ffffff;
-        padding: 1.2rem 1rem;
-        border-radius: 0 0 8px 8px;
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      @media screen and (max-width: 768px) {
-        .main {
-          flex-direction: column;
-        }
-
-        .aside {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <div class="header"></div>
+      <div class="header">
+        <div class="brand">
+          <img src="logo.png" alt="Logo" />
+        </div>
+      </div>
       <div class="navigation">
         <ul>
-          <li>
-            <a href="#">Menu</a>
-          </li>
-          <li>
-            <a href="#">Menu</a>
-          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </div>
       <div class="main">
-        <div class="aside">
+        <div class="aside"></div>
+        <div class="content">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Judul</h3>
+              <h3 class="card-title">Biodata</h3>
             </div>
             <div class="card-body">
-              <p>Konten</p>
+              <form class="row" id="form-biodata">
+                <div class="col-6">
+                  <label class="form-label" for="nama">Nama</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="nama"
+                    name="nama"
+                  />
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="angkatan">Angkatan</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="angkatan"
+                    name="angkatan"
+                  />
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="jk">Kelamin</label>
+                  <select class="form-control" id="jk" name="jk">
+                    <option value="" hidden>Pilih</option>
+                    <option value="M">Pria</option>
+                    <option value="F">Wanita</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="jurusan">Jurusan</label>
+                  <select class="form-control" id="jurusan" name="jurusan">
+                    <option value="" hidden>Pilih</option>
+                    <option value="SK">SK</option>
+                    <option value="SI">SI</option>
+                    <option value="MI">MI</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="alamat">Alamat</label>
+                  <textarea
+                    class="form-control"
+                    id="alamat"
+                    rows="5"
+                    name="alamat"
+                  ></textarea>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="deskripsi">Deskripsi</label>
+                  <textarea
+                    class="form-control"
+                    id="deskripsi"
+                    rows="5"
+                    name="deskripsi"
+                  ></textarea>
+                </div>
+                <div
+                  class="col-12"
+                  style="display: flex; justify-content: flex-end"
+                >
+                  <button type="submit" class="btn">Submit</button>
+                </div>
+              </form>
             </div>
             <div class="card-footer">
-              <span>Footer</span>
+              <small>Silahkan mengisi form biodata anda.</small>
             </div>
           </div>
         </div>
-        <div class="content"></div>
       </div>
       <div class="footer"></div>
     </div>
+
+    <script>
+      const form = document.getElementById("form-biodata");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const nama = formData.get("nama");
+        const angkatan = formData.get("angkatan");
+        const jk = formData.get("jk");
+
+        alert("Nama: " + nama + "\nJK: " + jk);
+      });
+    </script>
   </body>
 </html>
